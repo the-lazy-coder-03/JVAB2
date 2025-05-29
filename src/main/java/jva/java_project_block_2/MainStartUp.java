@@ -17,10 +17,12 @@ public class MainStartUp extends Application {
         stage.show();
 
         // Optionally, test DB connection when app starts
-        Database.connect();
+
     }
 
     public static void main(String[] args) {
+        // Optionally, test DB connection when app startsz
+        Database.connect();
         launch();
     }
 }

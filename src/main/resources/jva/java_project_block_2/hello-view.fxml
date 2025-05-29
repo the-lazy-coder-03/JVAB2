@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="501.0" prefWidth="841.0" style="-fx-background-color: #9fcede;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="557.0" prefWidth="841.0" style="-fx-background-color: #9fcede;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label layoutX="14.0" layoutY="14.0" text="Insurance Management System" textFill="#a81b87">
          <font>
@@ -19,18 +19,18 @@
       <Label layoutX="36.0" layoutY="81.0" text="ID Number" />
       <Label layoutX="36.0" layoutY="114.0" text="Name:" />
       <Label layoutX="36.0" layoutY="143.0" text="Surname:" />
-      <Label layoutX="36.0" layoutY="178.0" text="Address" />
+      <Label layoutX="36.0" layoutY="178.0" text="Adress" />
       <Label layoutX="36.0" layoutY="213.0" text="Age" />
-      <Label layoutX="29.0" layoutY="262.0" text="Policy Type " />
-      <Label layoutX="27.0" layoutY="312.0" text="Sum Insured" />
-      <Label layoutX="25.0" layoutY="388.0" text="Coverage Amount" />
-      <Label layoutX="41.0" layoutY="418.0" text="Premium" />
-      <TextField layoutX="160.0" layoutY="77.0" />
-      <TextField layoutX="160.0" layoutY="110.0" />
-      <TextField layoutX="160.0" layoutY="139.0" />
-      <TextField layoutX="160.0" layoutY="174.0" />
-      <TextField layoutX="160.0" layoutY="209.0" />
-       <ComboBox layoutX="160.0" layoutY="257.0" prefWidth="200.0">
+      <Label layoutX="36.0" layoutY="262.0" text="Policy Type " />
+      <Label layoutX="36.0" layoutY="312.0" text="Sum Insured" />
+      <Label layoutX="36.0" layoutY="388.0" text="Coverage Amount" />
+      <Label layoutX="36.0" layoutY="433.0" text="Premium" />
+      <TextField fx:id="IDNUMLABEL" layoutX="160.0" layoutY="77.0" style="-fx-background-color: #FFFFFF;" />
+      <TextField fx:id="NAMELABEL" layoutX="160.0" layoutY="110.0" style="-fx-background-color: #FFFFFF;" />
+      <TextField fx:id="SURNAMELABEL" layoutX="160.0" layoutY="139.0" style="-fx-background-color: #FFFFFF;" />
+      <TextField fx:id="ADDRESSLABEL" layoutX="160.0" layoutY="174.0" style="-fx-background-color: #FFFFFF;" />
+      <TextField layoutX="160.0" layoutY="209.0" style="-fx-background-color: #FFFFFF;" />
+       <ComboBox fx:id="POLICYtYPEDROPDROWN" layoutX="160.0" layoutY="257.0" prefWidth="200.0">
            <items>
                <FXCollections fx:factory="observableArrayList">
                    <String fx:value="Life Insurance" />
@@ -39,16 +39,20 @@
                </FXCollections>
            </items>
        </ComboBox>
-      <Button layoutX="217.0" layoutY="352.0" mnemonicParsing="false" text="Button" />
-       <ComboBox layoutX="169.0" layoutY="308.0" prefWidth="150.0">
+      <Button fx:id="CALCPREMBUTTON" layoutX="160.0" layoutY="349.0" mnemonicParsing="false" text="Calculate Premium" />
+       <ComboBox fx:id="SUMINSUREDDROPDOWN" layoutX="160.0" layoutY="308.0" prefWidth="150.0">
            <items>
                <FXCollections fx:factory="observableArrayList">
-                   <String fx:value="R1000" />
-                   <String fx:value="R5000" />
-                   <String fx:value="R10000" />
+                   <String fx:value="1000" />
+                   <String fx:value="5000" />
+                   <String fx:value="10000" />
                </FXCollections>
            </items>
        </ComboBox>
+      <Label fx:id="PREMLABEL" layoutX="160.0" layoutY="429.0" prefHeight="26.0" prefWidth="127.0" style="-fx-background-color: #FFFFFF;" />
+      <Button layoutX="185.0" layoutY="473.0" mnemonicParsing="false" text="Submit" />
+      <Button layoutX="29.0" layoutY="513.0" mnemonicParsing="false" text="View Policies" />
+      <TextField fx:id="COVERAGEAMOUNTTEXT" layoutX="160.0" layoutY="385.0" style="-fx-background-color: #FFFFFF;" />
 
 
    </children>
