@@ -68,7 +68,6 @@
             <TableColumn prefWidth="75.0" text="Premium" />
         </columns>
       </TableView>
-0
 
    </children>
 
