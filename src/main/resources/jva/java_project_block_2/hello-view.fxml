@@ -52,10 +52,10 @@
            </items>
        </ComboBox>
       <Label fx:id="PREMLABEL" layoutX="160.0" layoutY="429.0" prefHeight="26.0" prefWidth="127.0" style="-fx-background-color: #FFFFFF;" />
-      <Button layoutX="185.0" layoutY="473.0" mnemonicParsing="false" text="Submit" />
-      <Button layoutX="29.0" layoutY="513.0" mnemonicParsing="false" text="View Policies" />
+      <Button fx:id="SubmitBtn" layoutX="185.0" layoutY="473.0" mnemonicParsing="false" text="Submit" />
+      <Button fx:id="ViewPolicies" layoutX="29.0" layoutY="513.0" mnemonicParsing="false" text="View Policies" />
       <TextField fx:id="COVERAGEAMOUNTTEXT" layoutX="160.0" layoutY="385.0" style="-fx-background-color: #FFFFFF;" />
-      <TableView fx:id="PolicyTable" layoutY="572.0" prefHeight="200.0" prefWidth="841.0">
+      <TableView fx:id="PolicyTable" layoutY="572.0" prefHeight="200.0" prefWidth="841.0" visible="True">
         <columns>
           <TableColumn prefWidth="75.0" text="ID Number" />
           <TableColumn prefWidth="75.0" text="Name" />

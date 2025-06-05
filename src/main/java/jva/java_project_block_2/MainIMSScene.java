@@ -16,8 +16,25 @@ public class MainIMSScene {
     @FXML private TextField COVERAGEAMOUNTTEXT;
     @FXML private Label PREMLABEL;
     @FXML private Button SubmitBtn;
+    @FXML private TableView <Character> PolicyTable;
+    @FXML private Button ViewPolicies;
+
+
+
+
     void initialize() {
         SubmitBtn.setOnAction(event -> handleSubmit());
+        SubmitBtn.setOnAction(event -> handleSubmit());
+        PolicyTable.setVisible(false);
+        PolicyTable.setManaged(false);
+        ViewPolicies.setText("View Policies");
+
+        ViewPolicies.setOnAction(event -> {
+            boolean isVisible = PolicyTable.isVisible();
+            PolicyTable.setVisible(!isVisible);
+            PolicyTable.setManaged(!isVisible); // prevents layout from reserving space when hidden
+            ViewPolicies.setText(isVisible ? "View Policies" : "Hide Policies");
+        });
     }
     @FXML
     private void handleSubmit() {

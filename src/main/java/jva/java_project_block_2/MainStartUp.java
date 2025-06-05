@@ -21,8 +21,10 @@ public class MainStartUp extends Application {
     }
 
     public static void main(String[] args) {
-        // Optionally, test DB connection when app startsz
+        // Optionally, test DB connection when app starts
         Database.testConnection();
+        Database.viewDatabase();
         launch();
+
     }
 }

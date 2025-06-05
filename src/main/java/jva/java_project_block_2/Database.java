@@ -24,9 +24,7 @@ public class Database {
 }*/
 package jva.java_project_block_2;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
 
 public class Database {
 
@@ -47,5 +45,36 @@ public class Database {
             e.printStackTrace();
         }
     }
-}
 
+
+    public static void viewDatabase() {
+        String query = "SELECT * customers"; // Replace with your actual table name
+
+        try (
+                Connection conn = getConnection();
+                Statement stmt = conn.createStatement();
+                ResultSet rs = stmt.executeQuery(query)
+        ) {
+            ResultSetMetaData metaData = rs.getMetaData();
+            int columnCount = metaData.getColumnCount();
+
+            // Print column headers
+            for (int i = 1; i <= columnCount; i++) {
+                System.out.print(metaData.getColumnName(i) + "\t");
+            }
+            System.out.println();
+
+            // Print rows
+            while (rs.next()) {
+                for (int i = 1; i <= columnCount; i++) {
+                    System.out.print(rs.getString(i) + "\t");
+                }
+                System.out.println();
+            }
+
+        } catch (SQLException e) {
+            System.out.println("❌ Error retrieving data from the database.");
+            e.printStackTrace();
+        }
+    }
+}
